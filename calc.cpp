@@ -39,7 +39,7 @@ int main() {
                 numbers.push_back(num);
             }
         } else {
-            cout << "Enter a single number: ";
+            cout << "Masukkan Angka: ";
             cin >> num;
         }
 
@@ -66,7 +66,7 @@ int main() {
                 result = numbers[0];
                 for (size_t i = 1; i < numbers.size(); i++) {
                     if (numbers[i] == 0) {
-                        cout << "Error: Division by zero!" << endl;
+                        cout << "Error: Bilangan tak terdefinisi!" << endl;
                         return 1;
                     }
                     result /= numbers[i];
@@ -75,13 +75,13 @@ int main() {
                 cout << thnx;
                 break;
             case 5:
-                result = (num >= 0) ? sqrt(num) : (cout << "Error: Cannot calculate square root of negative number!" << endl, 0);
+                result = (num >= 0) ? sqrt(num) : (cout << "Error: bilangan negatif!" << endl, 0);
                 cout << "" << endl;
                 cout << thnx;
                 break;
             case 6:
-                double exp;
-                cout << "Enter exponent: ";
+                int exp;
+                cout << "Masukkan Exponen: ";
                 cin >> exp;
                 result = pow(num, exp);
                 cout << "" << endl;
@@ -102,18 +102,18 @@ int main() {
                 cout << "" << endl;
                 cout << thnx;
                 break;
-            default: cout << "Invalid option!" << endl; 
+            default: cout << "Opsi tidak valid!" << endl; 
             return 1;
         }
 
-        cout << "Result: " << result << endl;
+        cout << "Hasil: " << result << endl;
     }else if (opt1 == 2) {
         cout << "<=== Choose Formula ===>" << endl;
         cout << "1. Persegi" << endl;
         cout << "2. Persegi Panjang" << endl;
         cout << "3. Segitiga" << endl;
-        cout << "4. Jajargenjang" << endl;
-        cout << "5. Lingkaran" << endl;
+        cout << "4. Lingkaran" << endl;
+        cout << "5. Jajargenjang" << endl;
         cout << "6. Layang-Layang" << endl;
         cout << "7. Trapesium" << endl;
         cout << "8. Belah Ketupat" << endl;
@@ -166,9 +166,104 @@ int main() {
                         cout << thnx;
                         break;
                     }
-
-
-        }
+            case 3:
+                int optS;
+                double s1, s2, s3;
+                double alas, tinggi;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1) {
+                        cout << "Pilih Segitiga" << endl;
+                        cout << "1. Segitiga Sama Sisi" << endl;
+                        cout << "2. Segitiga Sama Kaki" << endl;
+                        cout << "3. Segitiga Sembarang" << endl;
+                        cin >> optS;
+                        if (optS == 1) {
+                            cout << "Masukkan panjang sisi: ";
+                            cin >> s1;
+                            cout << "Keliling Segitiga tersebut adalah: " << s1 * 3;
+                            cout << "" << endl;
+                            cout << thnx;
+                            break;
+                        } else if (optS == 2 && optS == 3) {
+                            cout << "Masukkan panjang sisi1: ";
+                            cin >> s1;
+                            cout << "Masukkan panjang sisi2: ";
+                            cin >> s2;
+                            cout << "Masukkan panjang sisi3: ";
+                            cin >> s3;
+                            cout << "Keliling Segitiga tersebut adalah: " << s1 + s2 + s3;
+                            cout << "" << endl;
+                            cout << thnx;
+                            break;
+                        } else {
+                            cout << "Pilihan tidak sesuai!!";
+                        }
+                    } else if (opt3 == 2) {
+                        cout << "Pilih Segitiga" << endl;
+                        cout << "1. Segitiga Sama Sisi" << endl;
+                        cout << "2. Segitiga Sama Kaki" << endl;
+                        cout << "3. Segitiga Sembarang" << endl;
+                        cin >> optS;
+                        if (optS == 1 && optS == 2) {
+                            cout << "Masukkan Alas: ";
+                            cin >> alas;
+                            cout << "Masukkan Tinggi: ";
+                            cin >> tinggi;
+                            cout << "Luas Segitiga tersebut adalah: " << 1/2 * alas * tinggi;
+                            cout << "" << endl;
+                            cout << thnx;
+                            break;
+                        } else if (optS == 3) {
+                            cout << "Masukkan panjang sisi1: ";
+                            cin >> s1;
+                            cout << "Masukkan panjang sisi2: ";
+                            cin >> s2;
+                            cout << "Masukkan panjang sisi3: ";
+                            cin >> s3;
+                            double s = (s1 + s2 + s3) / 2; 
+                            double hasilS = sqrt(s * (s - s1) * (s - s2) * (s - s3));
+                            cout << "Luas Segitiga tersebut adalah: " << hasilS;
+                            cout << "" << endl;
+                            cout << thnx;
+                            break;
+                        } else {
+                            cout << "Pilihan tidak sesuai!!";
+                        }
+                    }
+            case 4: 
+                double d;
+                double r;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1) {
+                        cout << "Note: beri nilai '-' pada elemen yang tidak digunakan!" << endl;
+                        cout << "Masukkan diameter: ";
+                        cin >> d;
+                        cout << "Masukkan jari-jari: ";
+                        cin >> r;
+                        r = d/2;
+                        cout << "Keliling Lingkaran tersebut adalah: " << 2*pi*r;
+                        cout << "" << endl;
+                        cout << thnx;
+                        break;
+                    } else if (opt3 == 2) {
+                        cout << "Note: beri nilai '-' pada elemen yang tidak digunakan!" << endl;
+                        cout << "Masukkan Jari-jari: ";
+                        cin >> r;
+                        cout << "Masukkan diameter: ";
+                        cin >> d;
+                        r = d/2;
+                        cout << "Luas Lingkaran tersebut adalah: " << pi*r*r;
+                        cout << "" << endl;
+                        cout << thnx;
+                        break;
+                    }
+        }   
     }
     return 0;
 }
