@@ -105,8 +105,8 @@ int main() {
             default: cout << "Opsi tidak valid!" << endl; 
             return 1;
         }
-
         cout << "Hasil: " << result << endl;
+
     }else if (opt1 == 2) {
         cout << "<=== Choose Formula ===>" << endl;
         cout << "1. Persegi" << endl;
@@ -263,7 +263,11 @@ int main() {
                         cout << thnx;
                         break;
                     }
+            default: cout << "Maaf kami belum menyediakan fitur yang anda inginkan...";
+            return 1;
         }   
+    } else {
+        cout << "Mohon maaf, data tidak valid...";
     }
     return 0;
 }
