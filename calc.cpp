@@ -8,7 +8,7 @@ int main() {
 
     string pil = "<--- Pilih Salah Satu --->";
     string thnx = "<--=== Terimakasih Telah Menggunakan Program Ini ===-->";
-    int opt1, opt2, opt3;
+    int opt1, opt2, opt3, pilbil;
     const double pi = 3.14159265359;
     vector<double> numbers;
     double num, result;
@@ -32,10 +32,44 @@ int main() {
         cout << "9. Tan (tan)" << endl;
         cin >> opt2;
 
+        switch (opt2) {
+            case 1:
+                cout << "<=-- Anda Memilih Penjumlahan --=>" << endl;
+                break;
+            case 2:
+                cout << "<=-- Anda Memilih Pengurangan --=>" << endl;
+                break;
+            case 3:
+                cout << "<=-- Anda Memilih Perkalian --=>" << endl;
+                break;
+            case 4:
+                cout << "<=-- Anda Memilih Pembagian --=>" << endl;
+                break;
+            case 5:
+                cout << "<=-- Anda Memilih Akar Kuadrat --=>" << endl;
+                break;
+            case 6:
+                cout << "<=-- Anda Memilih Exponen --=>" << endl;
+                break;
+            case 7:
+                cout << "<=-- Anda Memilih Sin Trigonometri --=>" << endl;
+                break;
+            case 8:
+                cout << "<=-- Anda Memilih Cos Trigonometri --=>" << endl;
+                break;
+            case 9:
+                cout << "<=-- Anda Memilih Tan Trigonometri --=>" << endl;
+                break;
+            default:
+                cout << "Error: Fitur belum ditemukan";
+        }
 
         if (opt2 >= 1 && opt2 <= 4) {
-            cout << "Masukkan angka (ketik '=' untuk melihat hasil): ";
-            while (cin >> num && num != '=') {
+            cout << "Berapa bilangan yang ingin anda gunakan untuk operasi? ";
+            cin >> pilbil;        
+            for(int i = 0; i < pilbil; i++) {
+                cout << "Masukkan angka ke " << (i+1) << ": ";
+                cin >> num;
                 numbers.push_back(num);
             }
         } else {
@@ -47,20 +81,14 @@ int main() {
             case 1:
                 result = 0;
                 for (double n : numbers) result += n;
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 2:
                 result = numbers[0];
                 for (size_t i = 1; i < numbers.size(); i++) result -= numbers[i];
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 3:
                 result = 1;
                 for (double n : numbers) result *= n;
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 4:
                 result = numbers[0];
@@ -71,41 +99,29 @@ int main() {
                     }
                     result /= numbers[i];
                 }
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 5:
                 result = (num >= 0) ? sqrt(num) : (cout << "Error: bilangan negatif!" << endl, 0);
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 6:
                 int exp;
                 cout << "Masukkan Exponen: ";
                 cin >> exp;
                 result = pow(num, exp);
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 7: 
                 result = sin(num * pi / 180); 
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 8: 
                 result = cos(num * pi / 180); 
-                cout << "" << endl;
-                cout << thnx;
                 break;
             case 9: 
                 result = tan(num * pi / 180); 
-                cout << "" << endl;
-                cout << thnx;
                 break;
             default: cout << "Opsi tidak valid!" << endl; 
             return 1;
         }
-        cout << "Hasil: " << result << endl;
+        cout << "Hasilnya adalah: " << result << endl;
 
     }else if (opt1 == 2) {
         cout << "<=== Choose Formula ===>" << endl;
