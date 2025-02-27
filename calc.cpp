@@ -279,6 +279,114 @@ int main() {
                         cout << thnx;
                         break;
                     }
+            case 5:
+                double p, l;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1) {
+                        cout << "Masukkan panjang: ";
+                        cin >> p;
+                        cout << "Masukkan lebar";
+                        cin >> l;
+                        cout << "Keliling Jajargenjang tersebut adalah: " << 2*(p+l);
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    } else if (opt3 == 2) {
+                        cout << "Masukkan panjang: ";
+                        cin >> p;
+                        cout << "Masukkan lebar";
+                        cin >> l;
+                        cout << "Luas Jajargenjang tersebut adalah: " << p*l;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    }
+            case 6:
+                double s1, s2, s3, s4, d1, d2;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1) {
+                        cout << "Masukkan sisi 1: ";
+                        cin >> s1;
+                        cout << "Masukkan sisi 2: ";
+                        cin >> s2;
+                        cout << "Masukkan sisi 3: ";
+                        cin >> s3;
+                        cout << "Masukkan sisi 4: ";
+                        cin >> s4;
+                        cout << "Keliling Layang-Layang tersebut adalah: " << s1+s2+s3+s4;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    } else if (opt3 == 2) {
+                        cout << "Masukkan diagonal 1: ";
+                        cin >> d1;
+                        cout << "Masukkan diagonal 2:";
+                        cin >> d2;
+                        cout << "Luas Layang-Layang tersebut adalah: " << 0.5*d1*d2;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    }
+            case 7:
+                double s1, s2, s3, s4, a, b, t;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1 ) {
+                        cout << "Masukkan sisi 1: ";
+                        cin >> s1;
+                        cout << "Masukkan sisi 2: ";
+                        cin >> s2;
+                        cout << "Masukkan sisi 3: ";
+                        cin >> s3;
+                        cout << "Masukkan sisi 4: ";
+                        cin >> s4;
+                        cout << "Keliling Trapesium tersebut adalah: " << s1+s2+s3+s4;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    } else if (opt3 == 2) {
+                        cout << "Masukkan sisi a: ";
+                        cin >> a;
+                        cout << "Masukkan sisi b:";
+                        cin >> b;
+                        cout << "Masukkan tinggi: ";
+                        cin >> t;
+                        cout << "Luas Trapesium tersebut adalah: " << 0.5*(a+b)*t;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    }
+            case 8: 
+                double p, d1, d2;
+                cout << pil << endl;
+                cout << "1. Keliling" << endl;
+                cout << "2. Luas" << endl;
+                cin >> opt3;
+                    if (opt3 == 1) {
+                        cout << "Masukkan panjang sisi: ";
+                        cin >> p;
+                        cout << "Keliling Belah Ketupat tersebut adalah: " << 4*s;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    }else if (opt3 == 2) {
+                        cout << "Masukkan diagonal 1: ";
+                        cin >> d1;
+                        cout << "Masukkan diagonal 2: ";
+                        cin >> d2;
+                        cout << "Luas Belah Ketupat tersebut adalah: " << 0.5*d1*d2;
+                        cout << endl;
+                        cout << thnx;
+                        break;
+                    }
             default: cout << "Maaf kami belum menyediakan fitur yang anda inginkan...";
             return 1;
         }   
