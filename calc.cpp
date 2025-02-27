@@ -305,21 +305,21 @@ int main() {
                         break;
                     }
             case 6:
-                double s1, s2, s3, s4, d1, d2;
+                double p1, p2, p3, p4, d1, d2;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1) {
                         cout << "Masukkan sisi 1: ";
-                        cin >> s1;
+                        cin >> p1;
                         cout << "Masukkan sisi 2: ";
-                        cin >> s2;
+                        cin >> p2;
                         cout << "Masukkan sisi 3: ";
-                        cin >> s3;
+                        cin >> p3;
                         cout << "Masukkan sisi 4: ";
-                        cin >> s4;
-                        cout << "Keliling Layang-Layang tersebut adalah: " << s1+s2+s3+s4;
+                        cin >> p4;
+                        cout << "Keliling Layang-Layang tersebut adalah: " << p1+p2+p3+p4;
                         cout << endl;
                         cout << thnx;
                         break;
@@ -334,21 +334,21 @@ int main() {
                         break;
                     }
             case 7:
-                double s1, s2, s3, s4, a, b, t;
+                double q1, q2, q3, q4, a, b, t;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1 ) {
                         cout << "Masukkan sisi 1: ";
-                        cin >> s1;
+                        cin >> q1;
                         cout << "Masukkan sisi 2: ";
-                        cin >> s2;
+                        cin >> q2;
                         cout << "Masukkan sisi 3: ";
-                        cin >> s3;
+                        cin >> q3;
                         cout << "Masukkan sisi 4: ";
-                        cin >> s4;
-                        cout << "Keliling Trapesium tersebut adalah: " << s1+s2+s3+s4;
+                        cin >> q4;
+                        cout << "Keliling Trapesium tersebut adalah: " << q1+q2+q3+q4;
                         cout << endl;
                         cout << thnx;
                         break;
@@ -365,23 +365,23 @@ int main() {
                         break;
                     }
             case 8: 
-                double p, d1, d2;
+                double si, diag1, diag2;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1) {
                         cout << "Masukkan panjang sisi: ";
-                        cin >> p;
-                        cout << "Keliling Belah Ketupat tersebut adalah: " << 4*s;
+                        cin >> si;
+                        cout << "Keliling Belah Ketupat tersebut adalah: " << 4*si;
                         cout << endl;
                         cout << thnx;
                         break;
                     }else if (opt3 == 2) {
                         cout << "Masukkan diagonal 1: ";
-                        cin >> d1;
+                        cin >> diag1;
                         cout << "Masukkan diagonal 2: ";
-                        cin >> d2;
+                        cin >> diag2;
                         cout << "Luas Belah Ketupat tersebut adalah: " << 0.5*d1*d2;
                         cout << endl;
                         cout << thnx;
