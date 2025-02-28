@@ -12,12 +12,19 @@ int main() {
     const double pi = 3.14159265359;
     vector<double> numbers;
     double num, result;
+    
+    while (true) {
 
     cout << "<--=== Featured Calculator ===-->" << endl;
     cout << "Apa yang ingin anda lakukan?" << endl;
     cout << "1. Operasi bilangan" << endl;
     cout << "2. Rumus Bangun Datar" << endl;
+    cout << "3. Keluar" << endl;
     cin >> opt1;
+
+    if (opt1 == 3) {
+        break;
+    }
 
     if (opt1 == 1) {
         cout << "Pilih Operasi:" << endl;
@@ -30,7 +37,13 @@ int main() {
         cout << "7. Sin (sin)" << endl;
         cout << "8. Cos (cos)" << endl;
         cout << "9. Tan (tan)" << endl;
+        cout << "10. Kembali (<--)" << endl;
         cin >> opt2;
+
+        if (opt2 == 10) {
+            continue;
+        }
+
 
         switch (opt2) {
             case 1:
@@ -124,7 +137,7 @@ int main() {
         cout << "Hasilnya adalah: " << result << endl;
 
     }else if (opt1 == 2) {
-        cout << "<=== Choose Formula ===>" << endl;
+        cout << "<=== Pilih Bangun Datar ===>" << endl;
         cout << "1. Persegi" << endl;
         cout << "2. Persegi Panjang" << endl;
         cout << "3. Segitiga" << endl;
@@ -133,8 +146,13 @@ int main() {
         cout << "6. Layang-Layang" << endl;
         cout << "7. Trapesium" << endl;
         cout << "8. Belah Ketupat" << endl;
+        cout << "9. Kembali" << endl;
         cin >> opt2;
 
+        
+        if (opt2 == 9) {
+            continue;
+        }
         switch (opt2) {
             case 1:
                 double s;
@@ -256,7 +274,7 @@ int main() {
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
-                    if (opt3 == 1) {
+ if (opt3 == 1) {
                         cout << "Note: beri nilai '-' pada elemen yang tidak digunakan!" << endl;
                         cout << "Masukkan diameter: ";
                         cin >> d;
@@ -364,7 +382,7 @@ int main() {
                         cout << thnx;
                         break;
                     }
-            case 8: 
+            case 8:
                 double si, diag1, diag2;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
@@ -392,6 +410,7 @@ int main() {
         }   
     } else {
         cout << "Mohon maaf, data tidak valid...";
+    }
     }
     return 0;
 }
