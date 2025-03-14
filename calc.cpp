@@ -6,8 +6,8 @@ using namespace std;
 
 int main() {
 
-    string pil = "<--- Pilih Salah Satu --->";
-    string thnx = "<--=== Terimakasih Telah Menggunakan Program Ini ===-->";
+    string pil = "\n <--- Pilih Salah Satu --->";
+    string thnx = "<--=== Terimakasih Telah Menggunakan Program Ini ===--> \n";
     int opt1, opt2, opt3, pilbil;
     const double pi = 3.14159265359;
     vector<double> numbers;
@@ -154,6 +154,8 @@ int main() {
             continue;
         }
         switch (opt2) {
+            double p1, p2, p3, p4, d1, d2;
+            double b, p, l, d, r, s1, s2, s3, s4, a, t;
             case 1:
                 double s;
                 cout << pil << endl;
@@ -176,34 +178,31 @@ int main() {
                         break;
                     }
             case 2: 
-                double panjang, lebar;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1) {
                         cout << "Masukkan panjang: ";
-                        cin >> panjang;
+                        cin >> p;
                         cout << "Masukkan lebar: ";
-                        cin >> lebar;
-                        cout << "Keliling Persegi Panjang tersebut adalah: " << 2*(panjang + lebar);
-                        cout << "" << endl;
+                        cin >> l;
+                        cout << "Keliling Persegi Panjang tersebut adalah: " << 2*(p + l);
+                        cout << endl;
                         cout << thnx;
                         break;
                     } else if (opt3 == 2) {
                         cout << "Masukkan panjang: ";
-                        cin >> panjang;
+                        cin >> p;
                         cout << "Masukkan lebar: ";
-                        cin >> lebar;
-                        cout << "Luas Persegi Panjang tersebut adalah: " << panjang * lebar;
-                        cout << "" << endl;
+                        cin >> l;
+                        cout << "Luas Persegi Panjang tersebut adalah: " << p*l;
+                        cout << endl;
                         cout << thnx;
                         break;
                     }
             case 3:
                 int optS;
-                double s1, s2, s3;
-                double alas, tinggi;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
@@ -243,11 +242,11 @@ int main() {
                         cin >> optS;
                         if (optS == 1 && optS == 2) {
                             cout << "Masukkan Alas: ";
-                            cin >> alas;
+                            cin >> a;
                             cout << "Masukkan Tinggi: ";
-                            cin >> tinggi;
-                            cout << "Luas Segitiga tersebut adalah: " << 1/2 * alas * tinggi;
-                            cout << "" << endl;
+                            cin >> t;
+                            cout << "Luas Segitiga tersebut adalah: " << 1/2 * a * t;
+                            cout << endl;
                             cout << thnx;
                             break;
                         } else if (optS == 3) {
@@ -268,13 +267,11 @@ int main() {
                         }
                     }
             case 4: 
-                double d;
-                double r;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
- if (opt3 == 1) {
+                    if (opt3 == 1) {
                         cout << "Note: beri nilai '-' pada elemen yang tidak digunakan!" << endl;
                         cout << "Masukkan diameter: ";
                         cin >> d;
@@ -282,23 +279,22 @@ int main() {
                         cin >> r;
                         r = d/2;
                         cout << "Keliling Lingkaran tersebut adalah: " << 2*pi*r;
-                        cout << "" << endl;
+                        cout << endl;
                         cout << thnx;
                         break;
                     } else if (opt3 == 2) {
                         cout << "Note: beri nilai '-' pada elemen yang tidak digunakan!" << endl;
-                        cout << "Masukkan Jari-jari: ";
-                        cin >> r;
                         cout << "Masukkan diameter: ";
                         cin >> d;
+                        cout << "Masukkan jari-jari: ";
+                        cin >> r;
                         r = d/2;
                         cout << "Luas Lingkaran tersebut adalah: " << pi*r*r;
-                        cout << "" << endl;
+                        cout << endl;
                         cout << thnx;
                         break;
                     }
             case 5:
-                double p, l;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
@@ -323,7 +319,6 @@ int main() {
                         break;
                     }
             case 6:
-                double p1, p2, p3, p4, d1, d2;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
@@ -352,28 +347,27 @@ int main() {
                         break;
                     }
             case 7:
-                double q1, q2, q3, q4, a, b, t;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1 ) {
                         cout << "Masukkan sisi 1: ";
-                        cin >> q1;
+                        cin >> s1;
                         cout << "Masukkan sisi 2: ";
-                        cin >> q2;
+                        cin >> s2;
                         cout << "Masukkan sisi 3: ";
-                        cin >> q3;
+                        cin >> s3;
                         cout << "Masukkan sisi 4: ";
-                        cin >> q4;
-                        cout << "Keliling Trapesium tersebut adalah: " << q1+q2+q3+q4;
+                        cin >> s4;
+                        cout << "Keliling Trapesium tersebut adalah: " << s1+s2+s3+s4;
                         cout << endl;
                         cout << thnx;
                         break;
                     } else if (opt3 == 2) {
                         cout << "Masukkan sisi a: ";
                         cin >> a;
-                        cout << "Masukkan sisi b:";
+                        cout << "Masukkan sisi b: ";
                         cin >> b;
                         cout << "Masukkan tinggi: ";
                         cin >> t;
@@ -383,23 +377,22 @@ int main() {
                         break;
                     }
             case 8:
-                double si, diag1, diag2;
                 cout << pil << endl;
                 cout << "1. Keliling" << endl;
                 cout << "2. Luas" << endl;
                 cin >> opt3;
                     if (opt3 == 1) {
                         cout << "Masukkan panjang sisi: ";
-                        cin >> si;
-                        cout << "Keliling Belah Ketupat tersebut adalah: " << 4*si;
+                        cin >> s1;
+                        cout << "Keliling Belah Ketupat tersebut adalah: " << 4*s1;
                         cout << endl;
                         cout << thnx;
                         break;
                     }else if (opt3 == 2) {
                         cout << "Masukkan diagonal 1: ";
-                        cin >> diag1;
+                        cin >> d1;
                         cout << "Masukkan diagonal 2: ";
-                        cin >> diag2;
+                        cin >> d2;
                         cout << "Luas Belah Ketupat tersebut adalah: " << 0.5*d1*d2;
                         cout << endl;
                         cout << thnx;
